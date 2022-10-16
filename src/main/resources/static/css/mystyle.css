@@ -1,0 +1,17 @@
+body{
+    background: #dddddd;
+}
+
+.container{
+    background: white;
+    elevation: lower;
+    padding: 20px;
+}
+
+.profile{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-content: center;
+}
