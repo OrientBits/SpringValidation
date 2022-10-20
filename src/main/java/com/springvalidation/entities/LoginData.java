@@ -4,20 +4,20 @@ import javax.validation.constraints.*;
 
 public class LoginData {
 
-    @NotBlank(message ="User name can not be empty !!")
+    @NotBlank(message = "User name can not be empty!!")
     @Size(min = 3, max = 12, message = "User name must be between 3-12!")
-    private String userName;
+    private String name;
 
     @Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", message = "InValid email")
     private String email;
 
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -32,7 +32,7 @@ public class LoginData {
     @Override
     public String toString() {
         return "LoginData{" +
-                "userName=" + userName +
+                "name=" + name +
                 ", email=" + email +
                 '}';
     }

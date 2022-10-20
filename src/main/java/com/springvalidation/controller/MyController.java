@@ -22,15 +22,16 @@ public class MyController {
 
     //handler for processing from
     @PostMapping("/process")
-    public String processForm(@ModelAttribute("loginData") @Valid LoginData loginData,  BindingResult bindingResult,Model model){
+    public String processForm( @Valid @ModelAttribute("loginData") LoginData loginData,  BindingResult bindingResult,Model model){
         if (bindingResult.hasErrors()){
+            System.out.println("--------has errors--------");
             System.out.println(bindingResult);
             return "form";
         }
 
         System.out.println(bindingResult);
         System.out.println(loginData);
-        return "form";
+        return "success";
     }
 
 
